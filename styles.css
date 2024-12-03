@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --lighter-Blue: hsl(213, 23%, 23%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--Very-Dark-Blue);
+    color: var(--White);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    
+}
+
+
+main {
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: var(--Dark-Blue);
+    width: 300px;
+    max-width: 375px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 20px;
+
+    form {
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: var(--lighter-Blue);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            
+            .star-image {
+                object-fit: contain;
+                transition: transform 2s;
+            }
+        }
+
+        .question {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 1.35rem;
+        }
+
+        .feedback-request {
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+
+        .rating-options {
+            display: flex;
+            width: 100%;
+            height: auto;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .rating {
+                width: 35px;
+                height: 35px;
+                border: 0;
+                border-radius: 50%;
+                background-color: var(--lighter-Blue);
+                color: var(--White);
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--White);
+                    color: #000;
+                    font-weight: 700;
+
+                    &:active {
+                        background-color: var(--Orange);
+                    }
+                }
+            }
+        }
+
+        #submit {
+            width: 100%;
+            height: 40px;
+            background-color: var(--Orange);
+            border: 0;
+            border-radius: 20px;
+            letter-spacing: 3px;
+            color: var(--Very-Dark-Blue);
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+                &:active {
+                    background-color: var(--White);
+                }
+            }
+
+            
+        }
+    }
+
+    .thank-you-page {
+
+        .thank-you-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .thank-you-image {
+                margin-bottom: 20px;
+            }
+
+            .rating-info {
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: var(--lighter-Blue);
+                color: var(--Orange);
+                border-radius: 20px;
+            }
+
+            .thank-you {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .thank-you-note {
+                text-align: center;
+                font-weight: 100;
+                font-size: .8rem;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 600px) {
+    main {
+        width: 600px;
+
+        form {
+            .feedback-request {
+                margin-bottom: 20px;
+                font-size: .9rem;
+                font-weight: 100;
+            }
+    
+            .rating-options {
+                .rating {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+        .thank-you-page {
+            .thank-you-container {
+                .thank-you-note {
+                    text-align: center;
+                    font-weight: 100;
+                    font-size: .93rem;
+                }
+            }
+        }
+
+    }
+}
+
+.disabled {
+    display: none;
+}
+
