@@ -97,6 +97,10 @@ main {
                 &:active {
                         background-color: var(--Orange);
                     }
+                
+                 &:focus {
+                        background-color: var(--Orange);
+                    }
             }
         }
 
